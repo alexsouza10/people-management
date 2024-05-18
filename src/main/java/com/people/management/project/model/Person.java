@@ -15,8 +15,11 @@ public class Person {
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Address> addresses = new ArrayList<>();
+
     @OneToOne
     private Address primaryAddress;
+
+    public Person() {}
 
     public Person(Long id, String fullName, Date dateOfBirth, List<Address> addresses, Address primaryAddress) {
         this.id = id;
