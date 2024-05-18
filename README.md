@@ -1,111 +1,76 @@
-# Project Management People API
+# Gerenciamento de Pessoas API
 
-The Project Management People API is a RESTful service built with Spring Boot that allows for managing people and their addresses. It follows SOLID principles and provides endpoints for CRUD operations on people and their addresses.
+A Gerenciamento de Pessoas API é uma aplicação RESTful desenvolvida para permitir a criação, edição e consulta de pessoas e seus endereços associados.
 
-## Features
+## Estrutura do Projeto
 
-- CRUD operations for managing people
-- CRUD operations for managing addresses associated with people
-- Setting a primary address for a person
-- Retrieving a list of people and their addresses
+O projeto segue uma estrutura organizada em camadas, respeitando os conceitos de Design Patterns, SOLID e Clean Code. A estrutura básica é composta por:
 
-## Prerequisites
+- `src/main/java/com/people/management/api`: Contém o código-fonte da aplicação.
+  - `controller/`: Controladores REST.
+  - `model/`: Entidades da aplicação.
+  - `repository/`: Interfaces de acesso a dados.
+  - `service/`: Lógica de negócio da aplicação.
+    - `impl/`: Implementações dos serviços.
 
-Before running this project, make sure you have the following installed:
+## Diagrama de Classes
 
-- Java Development Kit (JDK) 11 or higher
-- Apache Maven
-- PostgreSQL (optional, if you want to use a database)
-
-## Setup
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/alexsouza10/people-management.git
-   ```
-
-2. **Navigate to the project directory:**
-
-   ```bash
-   cd people-management-project
-   ```
-
-3. **Build the project using Maven:**
-
-   ```bash
-   mvn clean install
-   ```
-
-4. **Run the application:**
-
-   ```bash
-   mvn spring-boot:run
-   ```
-
-The application will start and be accessible at `http://localhost:8080`.
+![Diagrama](img/DiagramAttus.png)
 
 ## Endpoints
 
-The following endpoints are available:
+A API fornece os seguintes endpoints:
 
-- `POST /api/people`: Create a new person
-- `PUT /api/people/{id}`: Update an existing person
-- `GET /api/people`: Get a list of all people
-- `GET /api/people/{id}`: Get details of a specific person
-- `DELETE /api/people/{id}`: Delete a person
-- `POST /api/people/{id}/addresses`: Add a new address for a person
-- `PUT /api/people/{id}/addresses/{addressId}`: Update an existing address for a person
-- `GET /api/people/{id}/addresses`: Get a list of all addresses for a person
-- `DELETE /api/people/{id}/addresses/{addressId}`: Delete an address for a person
-- `PUT /api/people/{id}/addresses/{addressId}/primary`: Set an address as primary for a person
+- `POST /api/pessoas`: Cria uma nova pessoa.
+- `PUT /api/pessoas/{id}`: Atualiza uma pessoa existente.
+- `GET /api/pessoas`: Obtém a lista de todas as pessoas.
+- `GET /api/pessoas/{id}`: Obtém os detalhes de uma pessoa específica.
+- `DELETE /api/pessoas/{id}`: Exclui uma pessoa.
+- `POST /api/pessoas/{id}/enderecos`: Adiciona um novo endereço para uma pessoa.
+- `PUT /api/pessoas/{id}/enderecos/{enderecoId}`: Atualiza um endereço existente para uma pessoa.
+- `GET /api/pessoas/{id}/enderecos`: Obtém a lista de todos os endereços de uma pessoa.
+- `DELETE /api/pessoas/{id}/enderecos/{enderecoId}`: Exclui um endereço de uma pessoa.
+- `PUT /api/pessoas/{id}/enderecos/{enderecoId}/principal`: Define um endereço como principal para uma pessoa.
 
-## Usage
+## Pré-requisitos
 
-You can interact with the API using any HTTP client, such as cURL, Postman, or HTTPie. Here are some example requests:
+Antes de executar o projeto, certifique-se de ter instalado:
 
-1. **Create a new person:**
+- JDK 11 ou superior
+- Apache Maven
+- PostgreSQL (opcional, se desejar utilizar um banco de dados)
 
-   ```bash
-   curl -X POST -H "Content-Type: application/json" -d '{"fullName":"John Doe","dateOfBirth":"1990-01-01"}' http://localhost:8080/api/people
-   ```
+## Execução do Projeto
 
-2. **Add an address for a person:**
-
-   ```bash
-   curl -X POST -H "Content-Type: application/json" -d '{"street":"123 Main St","zipCode":"12345","number":10,"city":"New York","state":"NY"}' http://localhost:8080/api/people/{personId}/addresses
-   ```
-
-3. **Get details of a person:**
+1. Clone o repositório:
 
    ```bash
-   curl http://localhost:8080/api/people/{personId}
-   ```
+   git clone https://github.com/alexsouza10/people-management.git 
 
-4. **Update an existing person:**
+# Navegue até o diretório do projeto:
+cd gerenciamento-pessoas-api
 
-   ```bash
-   curl -X PUT -H "Content-Type: application/json" -d '{"fullName":"Jane Doe","dateOfBirth":"1995-01-01"}' http://localhost:8080/api/people/{personId}
-   ```
+# Execute o comando Maven para construir o projeto:
+mvn clean install
 
-## Testing
+# Execute o aplicativo Spring Boot:
+mvn spring-boot:run
 
-Unit tests are included in the project to ensure its correctness. You can run the tests using Maven:
+O aplicativo estará acessível em [http://localhost:8080](http://localhost:8080).
+
+## Testes
+O projeto inclui testes automatizados para garantir a qualidade do código. Execute os testes usando o comando:
 
 ```bash
 mvn test
 ```
 
-## Contributing
+# Documentação com Swagger
 
-Contributions are welcome! If you'd like to contribute to this project, please follow these guidelines:
 
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/yourfeature`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature/yourfeature`)
-5. Create a new Pull Request
+Aproveite a praticidade e a eficiência do Swagger para explorar e testar a API de Gerenciamento de Pessoas! Com o Swagger, você pode visualizar de forma interativa todos os endpoints disponíveis, bem como os detalhes de cada requisição. Não perca tempo! Rode a aplicação e acesse a URL do Swagger em http://localhost:8080/swagger-ui/index.html para começar a explorar agora mesmo. Experimente e descubra como é fácil e intuitivo utilizar nossa API com o Swagger!
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+<div style="display: flex; justify-content: center;">
+  <img src="img/SwaggerDoc.png" alt="SwaggerDoc" style="max-width: 45%; margin-right: 20px;">
+  <img src="img/ApiSwaggerPeople.png" alt="ApiSwaggerPeople" style="max-width: 45%; margin-left: 10px;">
+</div>
