@@ -1,8 +1,8 @@
-package com.people.management.project.service;
+package com.people.management.api.service;
 
 import java.util.List;
 
-import com.people.management.project.model.Address;
+import com.people.management.api.model.Address;
 
 public interface AddressService {
     Address createAddress(Address address);

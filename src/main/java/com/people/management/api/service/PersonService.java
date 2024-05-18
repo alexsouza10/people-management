@@ -1,9 +1,9 @@
-package com.people.management.project.service;
+package com.people.management.api.service;
 
 import java.util.List;
 
-import com.people.management.project.model.Address;
-import com.people.management.project.model.Person;
+import com.people.management.api.model.Address;
+import com.people.management.api.model.Person;
 
 public interface PersonService {
     Person createPerson(Person person);

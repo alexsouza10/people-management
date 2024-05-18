@@ -1,4 +1,4 @@
-package com.people.management.project.model;
+package com.people.management.api.model;
 
 import java.util.ArrayList;
 import java.util.Date;

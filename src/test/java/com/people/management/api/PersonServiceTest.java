@@ -1,4 +1,4 @@
-package com.people.management.project;
+package com.people.management.api;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -14,10 +14,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.people.management.project.model.Address;
-import com.people.management.project.model.Person;
-import com.people.management.project.repository.PersonRepository;
-import com.people.management.project.service.impl.PersonServiceImpl;
+import com.people.management.api.model.Address;
+import com.people.management.api.model.Person;
+import com.people.management.api.repository.PersonRepository;
+import com.people.management.api.service.impl.PersonServiceImpl;
 
 @SpringBootTest
 class PersonServiceTest {

@@ -1,4 +1,4 @@
-package com.people.management.project.controller;
+package com.people.management.api.controller;
 
 import java.util.List;
 
@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.people.management.project.model.Address;
-import com.people.management.project.model.Person;
-import com.people.management.project.service.PersonService;
+import com.people.management.api.model.Address;
+import com.people.management.api.model.Person;
+import com.people.management.api.service.PersonService;
 
 @RestController
 @RequestMapping("api/people")

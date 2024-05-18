@@ -1,4 +1,4 @@
-package com.people.management.project.controller;
+package com.people.management.api.controller;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.people.management.project.model.Address;
-import com.people.management.project.service.AddressService;
+import com.people.management.api.model.Address;
+import com.people.management.api.service.AddressService;
 
 @RestController
 @RequestMapping("api/addresses")

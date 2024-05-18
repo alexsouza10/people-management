@@ -1,14 +1,14 @@
-package com.people.management.project.service.impl;
+package com.people.management.api.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.people.management.project.model.Address;
-import com.people.management.project.model.Person;
-import com.people.management.project.repository.PersonRepository;
-import com.people.management.project.service.PersonService;
+import com.people.management.api.model.Address;
+import com.people.management.api.model.Person;
+import com.people.management.api.repository.PersonRepository;
+import com.people.management.api.service.PersonService;
 
 @Service
 public class PersonServiceImpl implements PersonService {

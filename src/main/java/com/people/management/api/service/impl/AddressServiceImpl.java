@@ -1,12 +1,12 @@
-package com.people.management.project.service.impl;
+package com.people.management.api.service.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.people.management.project.model.Address;
-import com.people.management.project.repository.AddressRepository;
-import com.people.management.project.service.AddressService;
+import com.people.management.api.model.Address;
+import com.people.management.api.repository.AddressRepository;
+import com.people.management.api.service.AddressService;
 
 @Service
 public class AddressServiceImpl implements AddressService {
